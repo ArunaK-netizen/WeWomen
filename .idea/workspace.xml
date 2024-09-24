@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/WeWomen.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/ContactsTextBox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/RoundedBox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/SendAlert.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/StartListening.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScreamDetector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screens/AddContactScreen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp.kv" afterDir="false" />
+    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="Files Added">
+      <change beforePath="$PROJECT_DIR$/Firebase/firebase-cred.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +22,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ArunaK-netizen/WeWomen",
+    "accountId": "5fef9c76-f935-471e-92f9-9d72b89bd2d0"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -130,7 +122,25 @@
       <workItem from="1726808703270" duration="1840000" />
       <workItem from="1726810864517" duration="123000" />
       <workItem from="1726928485255" duration="256000" />
+      <workItem from="1727150835637" duration="313000" />
     </task>
+    <task id="LOCAL-00001" summary="Files Added">
+      <option name="closed" value="true" />
+      <created>1727150936969</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727150936969</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Files Added">
+      <option name="closed" value="true" />
+      <created>1727151037144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727151037144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +156,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Files Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Files Added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WeWomen$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1726384699212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Human_Scream_Detection_ML_Python-main" />
