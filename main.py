@@ -15,11 +15,11 @@ from Components.SendAlert import EmergencyButton
 Window.size = (360, 700)
 
 # Firebase setup
-cred = credentials.Certificate('./Firebase/firebase-cred.json')
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate('./Firebase/firebase-cred.json')
+# firebase_admin.initialize_app(cred)
+#
+# # Define the authentication screen
 
-# Define the authentication screen
-FIREBASE_WEB_API_KEY = 'AIzaSyCetK_jqH11JQ1CohUZo_FF6ZfpYR-jBx0'
 
 
 
