@@ -10,6 +10,7 @@ from kivy.graphics import Color, Rectangle
 from Components.StartListening import CustomTextBox
 from Components.ContactsTextBox import addContacts
 from Components.SendAlert import EmergencyButton
+from Screens.AddContactScreen import AddContactScreen
 
 # Set the window size (for desktop testing)
 Window.size = (360, 700)
@@ -129,6 +130,7 @@ class GreetingApp(App):
         sm = ScreenManager()
         sm.add_widget(MainAppScreen(name='main'))
         # sm.add_widget(AddContactsScreen(name='contact_add_screen'))
+        sm.add_widget(AddContactScreen(name='contact_add_screen'))
 
         return sm
 

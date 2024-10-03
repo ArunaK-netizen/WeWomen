@@ -1,13 +1,9 @@
 from kivy.graphics import RoundedRectangle, Color
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
-import threading
 from kivy.uix.button import Button
-import sounddevice as sd
-from scipy.io.wavfile import write
-import wavio as wv
+
 
 class addContacts(BoxLayout):
     def __init__(self, **kwargs):
@@ -58,8 +54,9 @@ class addContacts(BoxLayout):
             color=(86 / 255, 100 / 255, 245 / 255, 1),
             background_normal='',
             font_name='./Fonts/lexenddeca.ttf'
-
         )
+        self.action_button.bind(on_press=self.go_to_add_contact)
+
         button_layout.add_widget(self.action_button)
 
         self.add_widget(title)
@@ -70,3 +67,10 @@ class addContacts(BoxLayout):
     def update_background(self, *args):
         self.background.pos = self.pos
         self.background.size = self.size
+
+    def go_to_add_contact(self, instance):
+        # Switch to AddContactsScreen
+        if self.parent and self.parent.parent:
+            self.parent.parent.manager.current = 'contact_add_screen'
+        else:
+            print("ScreenManager not found")

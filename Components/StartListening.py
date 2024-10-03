@@ -3,13 +3,12 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.core.window import Window
 import threading
+import numpy as np
+from scipy.fftpack import fft
 from kivy.uix.button import Button
 import sounddevice as sd
-import numpy as np
-import soundfile as sf
 import sys
-import os
-import tempfile
+from kivy.uix.popup import Popup
 from kivy.clock import Clock
 from threading import Lock, Thread
 import traceback
@@ -86,6 +85,10 @@ class CustomTextBox(BoxLayout):
         # Queue for audio chunks
         self.chunk_queue = []
 
+        # List to store last five detected frequencies
+        self.detected_frequencies = []
+        self.scream_detected = False  # Flag to indicate if a scream has been detected
+
     def update_background(self, *args):
         self.background.pos = self.pos
         self.background.size = self.size
@@ -108,7 +111,7 @@ class CustomTextBox(BoxLayout):
             self.stop_listening()
         self.count += 1
 
-    def stop_listening(self):
+    def stop_listening(self, dt=None):
         if self.running:
             self.stream.stop()
             self.stream.close()
@@ -121,15 +124,12 @@ class CustomTextBox(BoxLayout):
         if status:
             print(status, file=sys.stderr)
 
-        # Use lock to avoid concurrency issues
         with self.lock:
             if self.recording.size == 0:
                 self.recording = np.zeros((0, indata.shape[1]))
 
-            # Append the incoming audio data to the recording buffer
             self.recording = np.concatenate((self.recording, indata), axis=0)
 
-            # Add the chunk to the queue for processing
             self.chunk_queue.append(indata.copy())
 
     def process_audio_queue(self):
@@ -140,31 +140,55 @@ class CustomTextBox(BoxLayout):
 
     def process_audio_chunk(self, chunk):
         try:
-            # Save the audio chunk to a temporary WAV file
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_wav_file:
-                sf.write(temp_wav_file.name, chunk, self.fs)  # Write chunk to a WAV file
-                temp_filename = temp_wav_file.name
-            print(temp_filename)
-            from ScreamDetector import callerFunction
-            output = callerFunction(temp_filename)
-            if(output == 1):
-                print("Scream Detected")
-            else:
-                print("Scream Not Detected")
+            data_int = np.frombuffer(chunk, dtype=np.int16)
+            fft_data = fft(data_int)
+            magnitude = np.abs(fft_data)
 
+            dominant_frequency = np.argmax(magnitude[:len(magnitude) // 2])
+            frequency = dominant_frequency * self.fs / len(data_int)
 
+            print(f"Detected Frequency: {frequency} Hz")
 
+            # Store the detected frequency
+            self.detected_frequencies.append(frequency)
+            if len(self.detected_frequencies) > 5:
+                self.detected_frequencies.pop(0)  # Keep only the last 5 frequencies
+
+            # Check if the last five frequencies fall in the scream range (500 Hz to 4000 Hz)
+            if len(self.detected_frequencies) == 5 and all(1300 <= f <= 4000 for f in self.detected_frequencies):
+                self.scream_detected = True  # Set the flag when a scream is detected
+                Clock.schedule_once(self.stop_listening)  # Schedule stop_listening to run in the main thread
+                self.show_scream_popup()
 
         except Exception as e:
             print(f"Error processing audio chunk: {e}")
             traceback.print_exc()
 
-        finally:
-            # Clean up the temp file
-            if os.path.exists(temp_filename):
-                os.remove(temp_filename)
+    def show_scream_popup(self):
+        Clock.schedule_once(self.create_scream_popup)
 
-    def update_ui(self, message):
-        # This function can be used to update the UI safely on the main thread
-        print(message)
-        # Here you can add code to update any other UI components based on the message
+    def create_scream_popup(self, dt):
+        popup_content = BoxLayout(orientation='vertical')
+        popup_content.add_widget(Label(text="Scream Detected!", font_size=20))
+
+        self.close_button = Button(text="Close", size_hint=(1, None), height=40)
+        popup_content.add_widget(self.close_button)
+
+        self.popup = Popup(title="Alert", content=popup_content, size_hint=(None, None), size=(400, 200))
+
+        self.close_button.bind(on_press=self.close_popup)
+        Clock.schedule_once(self.auto_close_popup, 5)
+
+        self.popup.open()
+
+    def close_popup(self, instance):
+        if self.popup:
+            self.popup.dismiss()
+
+    def auto_close_popup(self, dt):
+        if self.popup and self.popup.content:
+            self.popup.dismiss()
+            self.send_alert()
+
+    def send_alert(self):
+        pass
