@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="Files Added">
-      <change afterPath="$PROJECT_DIR$/user_id.txt" afterDir="false" />
+    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="Scream Detection Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ContactsTextBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactsTextBox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/SendAlert.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/SendAlert.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/StartListening.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/StartListening.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreamDetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScreamDetector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screens/AddContactScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/AddContactScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +168,7 @@
       <workItem from="1727452216029" duration="2325000" />
       <workItem from="1727506273441" duration="4043000" />
       <workItem from="1727525502481" duration="55000" />
-      <workItem from="1727968661045" duration="4645000" />
+      <workItem from="1727968661045" duration="5613000" />
     </task>
     <task id="LOCAL-00001" summary="Files Added">
       <option name="closed" value="true" />
@@ -207,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727151625533</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Scream Detection Added">
+      <option name="closed" value="true" />
+      <created>1727973395970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727973395970</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +242,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Files Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Files Added" />
+    <MESSAGE value="Scream Detection Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scream Detection Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -256,7 +260,7 @@
     <SUITE FILE_PATH="coverage/WeWomen$ScreamDetector.coverage" NAME="ScreamDetector Coverage Results" MODIFIED="1727971127329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WeWomen$modelloader.coverage" NAME="modelloader Coverage Results" MODIFIED="1727453995434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scream_detection-master" />
     <SUITE FILE_PATH="coverage/WeWomen$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1727969480055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WeWomen$main.coverage" NAME="main Coverage Results" MODIFIED="1727973007021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WeWomen$main.coverage" NAME="main Coverage Results" MODIFIED="1727973832050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WeWomen$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1727453502458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scream_detection-master" />
     <SUITE FILE_PATH="coverage/WeWomen$pb2h5.coverage" NAME="pb2h5 Coverage Results" MODIFIED="1726375581161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scream_detection_main" />
   </component>

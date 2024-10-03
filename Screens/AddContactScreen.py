@@ -128,3 +128,16 @@ class AddContactScreen(Screen):
     def go_back(self, instance):
         self.manager.current = self.manager.previous()
 
+    def fetch_contacts(self):
+        user_ref = db.reference(f'contacts/{user_id}')  # Reference to the user's contacts
+        contacts_data = user_ref.get()  # Get all contacts for the user
+
+        contact_list = []
+        if contacts_data:  # Check if there's any data
+            for key, contact in contacts_data.items():
+                contact_list.append(contact)  # Append each contact to the list
+        else:
+            print("No contacts found.")
+
+        print(contact_list)
+

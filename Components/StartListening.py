@@ -4,6 +4,7 @@ from kivy.uix.label import Label
 from kivy.core.window import Window
 import threading
 import numpy as np
+import os
 from scipy.fftpack import fft
 from kivy.uix.button import Button
 import sounddevice as sd
@@ -191,4 +192,11 @@ class CustomTextBox(BoxLayout):
             self.send_alert()
 
     def send_alert(self):
-        pass
+        from Screens.AddContactScreen import AddContactScreen
+        temp = AddContactScreen()
+        user_id_file = './user_id.txt'
+        userid = ''
+        if os.path.exists(user_id_file):
+            with open(user_id_file, 'r') as f:
+                userid = f.read().strip()
+        temp.fetch_contacts()
