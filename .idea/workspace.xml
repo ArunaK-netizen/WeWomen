@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="Sms functionality added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/StartListening.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/StartListening.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smsTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/smsTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +193,7 @@
       <workItem from="1727506273441" duration="4043000" />
       <workItem from="1727525502481" duration="55000" />
       <workItem from="1727968661045" duration="5773000" />
-      <workItem from="1728057136798" duration="3797000" />
+      <workItem from="1728057136798" duration="3847000" />
     </task>
     <task id="LOCAL-00001" summary="Files Added">
       <option name="closed" value="true" />
@@ -341,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728060936332</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060981338</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060981338</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
