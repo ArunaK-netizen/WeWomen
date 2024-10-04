@@ -200,4 +200,6 @@ class CustomTextBox(BoxLayout):
         if os.path.exists(user_id_file):
             with open(user_id_file, 'r') as f:
                 userid = f.read().strip()
-        temp.fetch_contacts()
+        contact_list = temp.fetch_contacts()
+        for i in contact_list:
+            from smsTest import send_msg
