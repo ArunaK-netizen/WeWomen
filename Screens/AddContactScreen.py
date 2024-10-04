@@ -129,6 +129,7 @@ class AddContactScreen(Screen):
         self.manager.current = self.manager.previous()
 
     def fetch_contacts(self):
+
         user_ref = db.reference(f'contacts/{user_id}')  # Reference to the user's contacts
         contacts_data = user_ref.get()  # Get all contacts for the user
 

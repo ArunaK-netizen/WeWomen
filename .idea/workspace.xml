@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="sms functionality added">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e2e5861b-918d-475a-8454-368a1d0cb5e7" name="Changes" comment="Sms functionality added">
+      <change beforePath="$PROJECT_DIR$/Components/SendAlert.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/SendAlert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/StartListening.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/StartListening.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screens/AddContactScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/AddContactScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +195,7 @@
       <workItem from="1727506273441" duration="4043000" />
       <workItem from="1727525502481" duration="55000" />
       <workItem from="1727968661045" duration="5773000" />
-      <workItem from="1728057136798" duration="2898000" />
+      <workItem from="1728057136798" duration="3631000" />
     </task>
     <task id="LOCAL-00001" summary="Files Added">
       <option name="closed" value="true" />
@@ -251,7 +253,79 @@
       <option name="project" value="LOCAL" />
       <updated>1728059342825</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060156325</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060156325</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060339173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060339173</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060411509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060411509</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060494803</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060494803</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060565451</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060565451</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060664315</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060664315</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060695530</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060695530</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060731513</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060731513</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Sms functionality added">
+      <option name="closed" value="true" />
+      <created>1728060781167</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060781167</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +361,8 @@
     <MESSAGE value="contacts fetched" />
     <MESSAGE value="sms functionality added" />
     <MESSAGE value="sms functionality added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sms functionality added" />
+    <MESSAGE value="Sms functionality added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sms functionality added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

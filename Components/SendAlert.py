@@ -78,6 +78,7 @@ class EmergencyButton(BoxLayout):
         contacts = contacts_ref.get()
 
         if contacts:
+
             message = "Emergency! I need help!"
             for contact in contacts.values():
                 phone = contact['phone']

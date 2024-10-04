@@ -192,6 +192,7 @@ class CustomTextBox(BoxLayout):
             self.send_alert()
 
     def send_alert(self):
+
         from Screens.AddContactScreen import AddContactScreen
         temp = AddContactScreen()
         user_id_file = './user_id.txt'
