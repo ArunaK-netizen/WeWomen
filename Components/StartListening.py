@@ -202,4 +202,5 @@ class CustomTextBox(BoxLayout):
                 userid = f.read().strip()
         contact_list = temp.fetch_contacts()
         for i in contact_list:
-            from smsTest import send_msg
+            from smsTest import send_message
+            send_message(i['phone_number'], i['message'])
