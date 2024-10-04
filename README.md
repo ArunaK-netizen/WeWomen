@@ -1,5 +1,5 @@
-# Emergency SMS App
-
+# WeWomen
+ 
 This project is an Emergency SMS application built using Kivy and Firebase. It allows users to send predefined emergency messages to a list of contacts stored in Firebase.
 
 ## Features
