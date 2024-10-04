@@ -8,6 +8,7 @@ import firebase_admin
 from firebase_admin import credentials, db
 from kivy.utils import platform
 from Screens.AddContactScreen import user_id
+import os
 # Initialize Firebase (make sure to set this up properly)
 cred = credentials.Certificate('firebase-cred.json')
 
@@ -62,7 +63,7 @@ class EmergencyButton(BoxLayout):
             background_normal='',
             font_name='./Fonts/lexenddeca.ttf'
         )
-        self.action_button.bind(on_press=self.send_sms_to_contacts)
+        self.action_button.bind(on_press=self.send_sms)
         button_layout.add_widget(self.action_button)
 
         self.add_widget(title)
@@ -73,25 +74,21 @@ class EmergencyButton(BoxLayout):
         self.background.pos = self.pos
         self.background.size = self.size
 
-    def send_sms_to_contacts(self, instance):
-        contacts_ref = db.reference(f'contacts/{user_id}')
-        contacts = contacts_ref.get()
+    def send_sms(self, instance):
+        from Screens.AddContactScreen import AddContactScreen
+        temp = AddContactScreen()
 
-        if contacts:
+        user_id_file = './user_id.txt'
 
-            message = "Emergency! I need help!"
-            for contact in contacts.values():
-                phone = contact['phone']
-                self.send_sms(phone, message)
+        userid = ''
 
-    def send_sms(self, phone_number, message):
-        if platform == 'android':
-            from pyjnius import autoclass
-            SmsManager = autoclass('android.telephony.SmsManager')
-            sms = SmsManager.getDefault()
-            sms.sendTextMessage(phone_number, None, message, None, None)
-            print(f"SMS sent to {phone_number}: {message}")
-        else:
-            print("SMS sending is only supported on Android.")
+        if os.path.exists(user_id_file):
+            with open(user_id_file, 'r') as f:
+                userid = f.read().strip()
+        contact_list = temp.fetch_contacts()
+        from smsTest import send_message
+        for i in contact_list:
+            send_message(i['phone'], "Help!")
+
 
 # Note: Ensure you handle permissions for sending SMS in your Kivy app.
